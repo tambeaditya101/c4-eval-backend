@@ -6,7 +6,7 @@ const userRouter = express.Router();
 
 userRouter.get("/", async (req, res) => {
   const users = await UserModel.find();
-  res.send("users page");
+  res.send(users);
 });
 
 userRouter.post("/register", async (req, res) => {
