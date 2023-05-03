@@ -6,7 +6,7 @@ const auth = (req, res, next) => {
   if (!token) {
     res.status(404).send({ msg: "token not found" });
   }
-  jwt.verify(token, "sagar", (err, decode) => {
+  jwt.verify(token, "aditya", (err, decode) => {
     if (err) {
       res.status(400).send({ msg: err.message });
     }
